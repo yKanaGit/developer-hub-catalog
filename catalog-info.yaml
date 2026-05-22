@@ -2,8 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: developer-hub-catalog
-  description: Developer Hub Catalog for onboarding
+  description: Developer Hub Catalog for onboarding templates
 spec:
   targets:
-    - ./users/org.yaml
     - ./templates/*/template.yaml
