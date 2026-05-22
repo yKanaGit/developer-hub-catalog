@@ -3,12 +3,10 @@ kind: Component
 metadata:
   name: ${{ values.name }}
   description: ${{ values.description }}
-  annotations:
-    github.com/project-slug: ${{ values.repoUrl | parseRepoUrl | pick('owner') }}/${{ values.repoUrl | parseRepoUrl | pick('repo') }}
   tags:
     - java
     - quarkus
 spec:
   type: service
   lifecycle: experimental
-  owner: ${{ values.owner }}
+  owner: user:default/guest

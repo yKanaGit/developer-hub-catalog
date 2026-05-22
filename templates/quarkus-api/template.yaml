@@ -16,7 +16,7 @@ spec:
     - title: Project Information
       required:
         - name
-        - owner
+        - description
       properties:
         name:
           title: Name
@@ -27,14 +27,6 @@ spec:
           title: Description
           type: string
           description: A description of the component
-        owner:
-          title: Owner
-          type: string
-          description: Owner of the component
-          ui:field: OwnerPicker
-          ui:options:
-            catalogFilter:
-              kind: [Group, User]
 
     - title: Repository Settings
       required:
@@ -57,7 +49,6 @@ spec:
         values:
           name: ${{ parameters.name }}
           description: ${{ parameters.description }}
-          owner: ${{ parameters.owner }}
 
     - id: publish
       name: Publish to GitHub
